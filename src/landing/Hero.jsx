@@ -35,19 +35,11 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Image */}
+        {/* Gambar */}
         <img 
         src={gambarkost}
         alt="Kost"
-        className="
-          w-[450px] md:w-[560px] 
-          absolute 
-          right-0
-          bottom-[-40px] md:bottom-[-70px]
-          drop-shadow-xl
-          rounded-xl
-        "
-      />
+        className="w-[450px] md:w-[560px] absolute right-0 bottom-[-40px] md:bottom-[-70px] drop-shadow-xl rounded-xl"/>
       </div>
     </section>
   );
