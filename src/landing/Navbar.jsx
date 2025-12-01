@@ -61,7 +61,7 @@ export default function Navbar() {
       <button>
         <span
           onClick={() => Navigate("/Login")}
-          className="cursor-pointer border-2 border-black px-7 py-2 rounded-full font-semibold hover:bg-blue-400 hover:text-white transition duration-300 hover:shadow-lg hover:scale-105"
+          className="cursor-pointer border border-black px-7 py-2 rounded-full font-semibold hover:bg-blue-400 hover:text-white transition duration-300 hover:shadow-lg hover:scale-105"
         >
           Login
         </span>
