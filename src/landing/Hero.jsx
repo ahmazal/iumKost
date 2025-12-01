@@ -3,12 +3,12 @@ import gambarkost from "../assets/picture/gambarkost.png";
 
 export default function Hero() {
   return (
-    <section className="px-8 md:px-20 py-5">
-      <div className="bg-gradient-to-r from-blue-300 to-blue-500 rounded-3xl p-36.5 flex flex-col md:flex-row items-center gap-10 text-white">
+    <section className="relative min-h-full px-8 md:px-28 py-5">
+      <div className="bg-gradient-to-r w-full h-[480px] from-blue-300 to-blue-500 rounded-4xl p-36.5 flex flex-col md:flex-row items-center gap-10 text-white">
         
         {/* Text */}
         <div className="flex-1">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+          <h1 className="text-2xl md:text-5xl font-bold leading-tight">
             Kost Putra 3 Saudara – <br /> Nyaman & Strategis
           </h1>
 
@@ -35,13 +35,13 @@ export default function Hero() {
           </div>
         </div>
 
+      </div>
         {/* Gambar */}
         <img
           src={gambarkost}
           alt="Kost"
-          className="w-[450px] md:w-[560px] absolute right-0 bottom-[-40px] md:bottom-[-78px] drop-shadow-xl rounded-xl"
+          className="w-[400px] md:w-[510px] absolute right-0 bottom-[20px] drop-shadow-xl"
         />
-      </div>
     </section>
   );
 }

@@ -10,7 +10,7 @@ export default function Navbar() {
       </div>
 
       {/* Navbar */}
-      <div className="flex items-center px-13 py-3 gap-15 bg-white/20 backdrop-blur-sm border-2 border-zinc-500 rounded-full shadow-md">
+      <div className="flex items-center px-13 py-3 gap-15 bg-white/20 backdrop-blur-sm border border-zinc-500 rounded-full shadow-md">
         <button
           className="relative flex flex-col uppercase text-xs font-bold tracking-wider group overflow-hidden"
           onClick={() => scrollToSection("Home")}
