@@ -9,7 +9,7 @@ export default function Hero() {
         {/* Text */}
         <div className="flex-1">
           <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-            Kost Putra 3 Saudara – <br/> Nyaman & Strategis
+            Kost Putra 3 Saudara – <br /> Nyaman & Strategis
           </h1>
 
           <p className="mt-4 text-lg text-white/90">
@@ -19,14 +19,14 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="flex gap-4 mt-8">
-            <a 
+            <a
               href="#lokasi"
               className="bg-blue-400 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-200 transition"
             >
               Lihat Lokasi
             </a>
 
-            <a 
+            <a
               href="https://wa.me/6288228675019"
               className="bg-white text-black px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition"
             >
@@ -36,10 +36,11 @@ export default function Hero() {
         </div>
 
         {/* Gambar */}
-        <img 
-        src={gambarkost}
-        alt="Kost"
-        className="w-[450px] md:w-[560px] absolute right-0 bottom-[-40px] md:bottom-[-70px] drop-shadow-xl rounded-xl"/>
+        <img
+          src={gambarkost}
+          alt="Kost"
+          className="w-[450px] md:w-[560px] absolute right-0 bottom-[-40px] md:bottom-[-78px] drop-shadow-xl rounded-xl"
+        />
       </div>
     </section>
   );
