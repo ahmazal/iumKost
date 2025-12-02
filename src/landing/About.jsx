@@ -1,25 +1,27 @@
 import React from "react";
 import gambarkost from "../assets/picture/gambarkost.png";
-import foto from "../assets/picture/foto.jpg";
+import right from "../assets/picture/right.png";
+import left from "../assets/picture/left.png";
 
 export default function About() {
   return (
-    <section className="w-full py-20 flex flex-col items-center text-center px-6 md:px-20">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center w-full max-w-6xl">
-        <div className="flex justify-start -ml-10">
+    <section className="w-full py-20 px-6 md:px-20 flex justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-3 items-center w-full max-w-7xl relative">
+        {/* LEFT IMAGE */}
+        <div className="flex justify-start md:-ml-20 -mt-50">
           <img
-            src={gambarkost}
-            alt="gambarkost"
-            className="rounded-3xl w-[330px] h-[350px] object-cover shadow-md"
+            src={left}
+            alt="left"
+            className="rounded-l-none rounded-r-3xl w-[330px] h-[300px] object-cover shadow-md"
           />
         </div>
 
         {/* CENTER TEXT */}
-        <div className="flex flex-col items-center px-4">
+        <div className="flex flex-col items-center px-3">
           <h1 className="text-3xl md:text-4xl font-semibold leading-tight">
             About
           </h1>
-          <p className="text-gray-700 mt-4 max-w-md text-sm md:text-base">
+          <p className="text-gray-700 mt-4 max-w-md text-sm md:text-base text-center ">
             Kos Putra 3 Saudara adalah hunian nyaman dan aman yang dirancang
             khusus untuk mahasiswa, pekerja, dan perantau yang membutuhkan
             tempat tinggal strategis dengan harga terjangkau. Kami berkomitmen
@@ -30,11 +32,11 @@ export default function About() {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="flex justify-center md:justify-start">
+        <div className="flex justify-end md:-mr-20 mt-50">
           <img
-            src={foto}
-            alt="foto"
-            className="rounded-3xl w-[330px] h-[350px] object-cover shadow-md"
+            src={right}
+            alt="right"
+            className="rounded-r-none rounded-l-3xl w-[260px] h-[300px] shadow-md"
           />
         </div>
       </div>
