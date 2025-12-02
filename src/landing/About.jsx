@@ -5,10 +5,16 @@ import left from "../assets/picture/left.png";
 
 export default function About() {
   return (
-    <section className="w-full py-20 px-6 md:px-20 flex justify-center">
+    <section
+      id="About"
+      className="w-full py-20 px-6 md:px-20 flex justify-center"
+    >
       <div className="grid grid-cols-1 md:grid-cols-3 items-center w-full max-w-7xl relative">
         {/* LEFT IMAGE */}
-        <div className="flex justify-start md:-ml-20 -mt-50">
+        <div
+          className="flex justify-start md:-ml-20 -mt-50"
+          data-aos="fade-right"
+        >
           <img
             src={left}
             alt="left"
@@ -17,11 +23,15 @@ export default function About() {
         </div>
 
         {/* CENTER TEXT */}
-        <div className="flex flex-col items-center px-3">
+        <div
+          className="flex flex-col items-center px-3"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <h1 className="text-3xl md:text-4xl font-semibold leading-tight">
             About
           </h1>
-          <p className="text-gray-700 mt-4 max-w-md text-sm md:text-base text-center ">
+          <p className="text-gray-700 mt-4 max-w-md text-sm md:text-base text-center">
             Kos Putra 3 Saudara adalah hunian nyaman dan aman yang dirancang
             khusus untuk mahasiswa, pekerja, dan perantau yang membutuhkan
             tempat tinggal strategis dengan harga terjangkau. Kami berkomitmen
@@ -32,7 +42,11 @@ export default function About() {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="flex justify-end md:-mr-20 mt-50">
+        <div
+          className="flex justify-end md:-mr-20 mt-50"
+          data-aos="fade-left"
+          data-aos-delay="400"
+        >
           <img
             src={right}
             alt="right"

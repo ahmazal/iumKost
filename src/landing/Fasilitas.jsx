@@ -3,16 +3,19 @@ import kosImage from "../assets/picture/Fasilitas.jpg";
 
 export default function Fasilitas() {
   return (
-    <section className="px-6 md:px-20 py-27">
-      <h2 className="text-2xl md:text-4xl font-bold text-center mb-20">
+    <section id="Fasilitas" className="px-6 md:px-20 py-27">
+      <h2
+        className="text-2xl md:text-4xl font-bold text-center mb-20"
+        data-aos="fade-up"
+      >
         Fasilitas di Kos Putra 3 Saudara
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* LEFT TEXT */}
-        <div className="space-y-15 pl-14">
+        <div className="space-y-15 pl-14" data-aos="fade-right">
           {/* ITEM 1 */}
-          <div className="flex gap-4">
+          <div className="flex gap-4" data-aos="fade-up">
             <span className="bg-blue-300 text-white px-4 py-2 rounded-xl font-bold">
               01
             </span>
@@ -26,7 +29,7 @@ export default function Fasilitas() {
           </div>
 
           {/* ITEM 2 */}
-          <div className="flex gap-4">
+          <div className="flex gap-4" data-aos="fade-up" data-aos-delay="150">
             <span className="bg-blue-300 text-white px-4 py-2 rounded-xl font-bold">
               02
             </span>
@@ -40,22 +43,25 @@ export default function Fasilitas() {
           </div>
 
           {/* ITEM 3 */}
-          <div className="flex gap-4">
+          <div className="flex gap-4" data-aos="fade-up" data-aos-delay="300">
             <span className="bg-blue-300 text-white px-4 py-2 rounded-xl font-bold">
               03
             </span>
             <div>
               <h3 className="font-bold text-lg mb-1">Lokasi</h3>
               <p className="text-gray-600">
-                Dekat kampus, minimarket, dan tempat makan. Berada di area
-                ramai, namun tetap tenang.
+                Dekat kampus, minimarket, dan tempat makan. Berada di area ramai,
+                namun tetap tenang.
               </p>
             </div>
           </div>
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="relative md:w-svh flex justify-center">
+        <div
+          className="relative md:w-svh flex justify-center"
+          data-aos="fade-left"
+        >
           <img
             src={kosImage}
             alt="kos"
@@ -63,7 +69,11 @@ export default function Fasilitas() {
           />
 
           {/* FLOATING CARDS */}
-          <div className="absolute top-7 left-6 bg-white/60 backdrop-blur-md border border-gray/40 shadow-2xl px-4 py-2 rounded-2xl flex items-center gap-3">
+          <div
+            className="absolute top-7 left-6 bg-white/60 backdrop-blur-md border border-gray/40 shadow-2xl px-4 py-2 rounded-2xl flex items-center gap-3"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
             <img
               src="https://i.pravatar.cc/40?img=7"
               alt="user"
@@ -75,13 +85,15 @@ export default function Fasilitas() {
             </div>
           </div>
 
-          <div className="absolute bottom-40 left-6 bg-white/60 backdrop-blur-md border border-gray/40 shadow-2xl px-4 py-2 rounded-2xl flex items-center gap-3">
+          <div
+            className="absolute bottom-40 left-6 bg-white/60 backdrop-blur-md border border-gray/40 shadow-2xl px-4 py-2 rounded-2xl flex items-center gap-3"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
             <img
               src="https://i.pravatar.cc/40?img=7"
               alt="user"
-              className="w-10 h-10 rounded-full shadow-xl 
-             bg-white/40 backdrop-blur-sm 
-             border border-white/30 p-0.5"
+              className="w-10 h-10 rounded-full shadow-xl"
             />
             <div>
               <p className="text-sm font-semibold">Rizal Musang</p>
@@ -89,7 +101,11 @@ export default function Fasilitas() {
             </div>
           </div>
 
-          <div className="absolute bottom-60 right-2 bg-white/60 backdrop-blur-md border border-gray/40 shadow-2xl px-4 py-2 rounded-2xl flex items-center gap-3">
+          <div
+            className="absolute bottom-60 right-2 bg-white/60 backdrop-blur-md border border-gray/40 shadow-2xl px-4 py-2 rounded-2xl flex items-center gap-3"
+            data-aos="zoom-in"
+            data-aos-delay="600"
+          >
             <img
               src="https://i.pravatar.cc/40?img=7"
               alt="user"
