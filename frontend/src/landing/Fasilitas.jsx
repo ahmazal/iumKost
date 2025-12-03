@@ -15,12 +15,12 @@ export default function Fasilitas() {
         {/* LEFT TEXT */}
         <div className="space-y-15 pl-14" data-aos="fade-right">
           {/* ITEM 1 */}
-          <div className="flex gap-4" data-aos="fade-up">
-            <span className="bg-blue-300 text-white px-4 py-2 rounded-xl font-bold">
+          <div className="flex gap-4 flex-col" data-aos="fade-up">
+            <span className="bg-blue-300 w-max text-white px-4 py-2 rounded-xl font-bold text-xl">
               01
             </span>
             <div>
-              <h3 className="font-bold text-lg mb-1">Kondisi Kos</h3>
+              <h3 className="font-bold text-2xl mb-1">Kondisi Kos</h3>
               <p className="text-gray-600">
                 Lingkungan aman, cocok untuk mahasiswa dan pekerja. Dilengkapi
                 perabot dasar.
@@ -29,12 +29,12 @@ export default function Fasilitas() {
           </div>
 
           {/* ITEM 2 */}
-          <div className="flex gap-4" data-aos="fade-up" data-aos-delay="150">
-            <span className="bg-blue-300 text-white px-4 py-2 rounded-xl font-bold">
+          <div className="flex gap-4 flex-col" data-aos="fade-up" data-aos-delay="150">
+            <span className="bg-blue-300 text-xl w-max text-white px-4 py-2 rounded-xl font-bold">
               02
             </span>
             <div>
-              <h3 className="font-bold text-lg mb-1">Fasilitas Kamar</h3>
+              <h3 className="font-bold text-2xl mb-1">Fasilitas Kamar</h3>
               <p className="text-gray-600">
                 WiFi stabil, cocok untuk WFH dan kuliah online. Sudah dilengkapi
                 tempat tidur dan lemari pakaian.
@@ -43,12 +43,12 @@ export default function Fasilitas() {
           </div>
 
           {/* ITEM 3 */}
-          <div className="flex gap-4" data-aos="fade-up" data-aos-delay="300">
-            <span className="bg-blue-300 text-white px-4 py-2 rounded-xl font-bold">
+          <div className="flex flex-col gap-4" data-aos="fade-up" data-aos-delay="300">
+            <span className="bg-blue-300 text-xl w-max text-white px-4 py-2 rounded-xl font-bold">
               03
             </span>
             <div>
-              <h3 className="font-bold text-lg mb-1">Lokasi</h3>
+              <h3 className="font-bold text-2xl mb-1">Lokasi</h3>
               <p className="text-gray-600">
                 Dekat kampus, minimarket, dan tempat makan. Berada di area ramai,
                 namun tetap tenang.

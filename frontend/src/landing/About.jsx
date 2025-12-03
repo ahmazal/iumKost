@@ -2,6 +2,7 @@ import React from "react";
 import gambarkost from "../assets/picture/gambarkost.png";
 import right from "../assets/picture/right.png";
 import left from "../assets/picture/left.png";
+import { FaFulcrum } from "react-icons/fa";
 
 export default function About() {
   return (
@@ -28,6 +29,11 @@ export default function About() {
           data-aos="fade-up"
           data-aos-delay="200"
         >
+          <span>
+            <FaFulcrum 
+            className="text-6xl"
+            />
+            </span>
           <h1 className="text-3xl md:text-4xl font-semibold leading-tight">
             About
           </h1>
@@ -39,6 +45,9 @@ export default function About() {
             penghuni dapat tinggal dengan tenang dan fokus pada aktivitas
             sehari-hari.
           </p>
+          <button className="mt-6 bg-black cursor-pointer py-2 px-6 rounded-xs group">
+            <span className="text-sm font-md text-white group-hover:text-gray-300 duration-200">hubungi kami</span>
+          </button>
         </div>
 
         {/* RIGHT IMAGE */}

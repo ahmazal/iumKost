@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer
       id="Footer"
-      className="w-full bg-white border-t mt-20 rounded-t-[50px] shadow-sm"
+    className="w-full bg-gray-50 border-t border-gray-200 mt-20 rounded-t-[50px] shadow-sm"
     >
       <div className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Logo */}

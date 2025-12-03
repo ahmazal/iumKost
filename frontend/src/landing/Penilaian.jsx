@@ -82,7 +82,7 @@ export default function Penilaian() {
         {[1, 2, 3, 4].map((i) => (
           <div
             key={i}
-            className="p-6 shadow-md border rounded-2xl bg-white/80 backdrop-blur-sm hover:shadow-xl transition duration-300"
+            className="p-6 border border-gray-200 rounded-2xl bg-white shadow-md transition"
             data-aos="zoom-in"
           >
             <div className="flex justify-between items-center">

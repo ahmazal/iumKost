@@ -37,7 +37,7 @@ export default function Navbar() {
     >
       <div className="flex items-center justify-between px-8 py-4 h-20">
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center">
           <img src={logokost} className="w-40 h-30" alt="Logo Kost" />
         </div>
 
@@ -97,7 +97,7 @@ export default function Navbar() {
         </div>
 
         <button>
-          <span className="cursor-pointer border border-black px-7 py-2 rounded-full font-semibold hover:bg-blue-400 hover:text-white transition duration-300 hover:shadow-lg hover:scale-105">
+          <span className="cursor-pointer border border-black px-7 py-2 rounded-full backdrop-blur-sm font-semibold hover:bg-blue-400 hover:text-white transition duration-300 hover:shadow-lg hover:scale-105">
             Login
           </span>
         </button>
