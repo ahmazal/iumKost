@@ -14,7 +14,7 @@ export default function Navbar() {
       } else {
         setShowNav(true);
       }
-
+      
       setLastScroll(current);
     };
 
