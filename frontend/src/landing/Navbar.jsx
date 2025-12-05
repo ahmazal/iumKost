@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import logokost from "../assets/picture/logokost.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [showNav, setShowNav] = useState(true);
   const [lastScroll, setLastScroll] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -96,7 +98,7 @@ export default function Navbar() {
           </button>
         </div>
 
-        <button>
+        <button onClick={() => navigate("/login")}>
           <span className="cursor-pointer border border-black px-7 py-2 rounded-full backdrop-blur-sm font-semibold hover:bg-blue-400 hover:text-white transition duration-300 hover:shadow-lg hover:scale-105">
             Login
           </span>
