@@ -1,4 +1,4 @@
-module.exports = {
-  login: require("./loginController"),
-  refreshToken: require("./refreshToken")
-};
+const login = require("./loginController");
+const refreshToken = require("./refreshToken");
+
+module.exports = { login, refreshToken };

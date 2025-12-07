@@ -2,7 +2,7 @@ import React from "react";
 import { Mail, Phone, Facebook, Twitter, Instagram } from "lucide-react";
 import logokost from "../assets/picture/logokost.png";
 
-export default function Footer() {
+function Footer() {
   return (
     <footer
       id="Footer"
@@ -66,3 +66,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+export default Footer;

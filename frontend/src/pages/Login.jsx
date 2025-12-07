@@ -2,7 +2,7 @@ import { useState } from "react";
 import api from "../api/api";
 
 export default function Login() {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [msg, setMsg] = useState("");
 
@@ -12,16 +12,33 @@ export default function Login() {
 
     try {
       const res = await api.post("/auth/login", {
-        username,
+        email,      // backend menerima email sekarang
         password,
       });
 
       localStorage.setItem("accessToken", res.data.accessToken);
       localStorage.setItem("refreshToken", res.data.refreshToken);
 
-      window.location.href = "/dashboard";
+      // Query /auth/me to determine role and redirect accordingly
+      try {
+        const meRes = await api.get('/auth/me');
+        if (meRes.data && meRes.data.success) {
+          const role = meRes.data.payload.role;
+          if (role === 'admin') {
+            window.location.href = '/dashboard';
+          } else {
+            window.location.href = '/user/dashboard';
+          }
+          return;
+        }
+      } catch (err) {
+        // if /me fails, fallback to admin dashboard
+        console.warn('Failed to fetch /auth/me after login', err);
+      }
+
+      window.location.href = '/dashboard';
     } catch (err) {
-      setMsg(err.response?.data?.msg || "Login failed");
+      setMsg(err.response?.data?.msg || err.response?.data?.message || "Login failed");
     }
   };
 
@@ -30,17 +47,15 @@ export default function Login() {
       <div className="w-full max-w-sm bg-white rounded-lg shadow-md p-6">
         <h2 className="text-2xl font-semibold text-center mb-6">Login Admin</h2>
 
-        {msg && (
-          <p className="text-red-500 text-center mb-4 text-sm">{msg}</p>
-        )}
+        {msg && <p className="text-red-500 text-center mb-4 text-sm">{msg}</p>}
 
         <form onSubmit={handleLogin} className="space-y-4">
           <input
-            type="text"
-            placeholder="Username"
-            value={username}
+            type="email"
+            placeholder="Email"
+            value={email}
             required
-            onChange={(e) => setUsername(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-200"
           />
 

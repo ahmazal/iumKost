@@ -1,23 +1,21 @@
 const jwt = require("jsonwebtoken");
-const { SECRET_KEY, REFRESH_SECRET } = require("../../utils/token");
+const { generateAccessToken } = require("../../utils/token");
+require("dotenv").config();
+
+const REFRESH_SECRET = process.env.REFRESH_TOKEN_SECRET;
 
 module.exports = (req, res) => {
-  const { token } = req.body;
-  if (!token)
-    return res.status(401).json({ msg: "No refresh token provided" });
+  const { refreshToken } = req.body;
 
-  jwt.verify(token, REFRESH_SECRET, (err, decoded) => {
-    if (err) return res.status(403).json({ msg: "Invalid refresh token" });
+  if (!refreshToken) return res.status(401).json({ msg: "No refresh token" });
 
-    const newAccessToken = jwt.sign(
-      {
-        id: decoded.id,
-        username: decoded.username,
-        role: decoded.role,
-      },
-      SECRET_KEY,
-      { expiresIn: "15m" }
-    );
+  jwt.verify(refreshToken, REFRESH_SECRET, (err, user) => {
+    if (err) {
+      console.error("Refresh token error:", err.message); // debug
+      return res.status(403).json({ msg: "Invalid refresh token" });
+    }
+
+    const newAccessToken = generateAccessToken(user);
 
     res.json({ accessToken: newAccessToken });
   });

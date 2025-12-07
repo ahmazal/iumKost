@@ -1,6 +1,8 @@
-const sendRes = require("../../res"); // atau lokasi file Anda
+const sendRes = require("../../res");
 const jwt = require("jsonwebtoken");
-const SECRET_KEY = "secret123";
+require("dotenv").config();
+
+const SECRET_KEY = process.env.ACCESS_TOKEN_SECRET;
 
 exports.me = (req, res) => {
     try {
@@ -14,12 +16,14 @@ exports.me = (req, res) => {
 
         jwt.verify(token, SECRET_KEY, (err, decoded) => {
             if (err) {
+                console.error("Token error:", err.message); // debug
                 return sendRes(403, null, "Token tidak valid atau expired", res);
             }
 
-            // decoded berisi: { id, username, role, iat, exp }
+            // decoded berisi: { id, email, username, role, iat, exp }
             const userData = {
                 id: decoded.id,
+                email: decoded.email,
                 username: decoded.username,
                 role: decoded.role
             };
@@ -28,6 +32,7 @@ exports.me = (req, res) => {
         });
 
     } catch (error) {
+        console.error("Server error:", error); // debug
         return sendRes(500, null, "Internal server error", res);
     }
 };
