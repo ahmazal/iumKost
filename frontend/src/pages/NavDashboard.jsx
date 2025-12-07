@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import api from "../api/api";
 import logo from "../assets/picture/logokost.png";
+import { useNavigate } from "react-router-dom";
 
 function NavDashboard() {
   const [user, setUser] = useState(null);
   const [showProfilePopup, setShowProfilePopup] = useState(false);
   const popupRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     let mounted = true;
@@ -20,12 +22,12 @@ function NavDashboard() {
               const pRes = await api.get(`/penghuni/${me.id}`);
               if (pRes.data && pRes.data.success) {
                 const p = pRes.data.payload || pRes.data || null;
-                setUser({ nama: p.Nama || p.nama || '', email: p.Email || p.email || '' });
+                setUser({ nama: p.Nama || p.nama || '', email: p.Email || p.email || '', role: 'penghuni', id: me.id });
               } else {
-                setUser({ nama: me.username || '', email: me.email || '' });
+                setUser({ nama: me.username || '', email: me.email || '', role: me.role || null, id: me.id || null });
               }
             } catch (err) {
-              setUser({ nama: me.username || '', email: me.email || '' });
+              setUser({ nama: me.username || '', email: me.email || '', role: me.role || null, id: me.id || null });
             }
           } else {
             setUser(me || null);
@@ -65,14 +67,14 @@ function NavDashboard() {
   return (
     <>
       <nav className="bg-[#001844] rounded-b-xl shadow-sm px-6 py-2 flex justify-between items-center relative">
-        <div>
-          <img src={logo} alt="logo" className="w-36" />
+        <div onClick={()=>navigate('/')}>
+          <img src={logo} alt="logo" className="w-36 cursor-pointer" />
         </div>
         <div className="relative" ref={popupRef}>
           <button
             onClick={() => setShowProfilePopup(s => !s)}
             title={user?.nama || user?.username || user?.email || 'User'}
-            className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-amber-400 flex items-center justify-center text-white font-semibold text-lg md:text-xl"
+            className="w-12 cursor-pointer h-12 md:w-14 md:h-14 rounded-full bg-amber-400 flex items-center justify-center text-white font-semibold text-lg md:text-xl"
           >
             {getInitial()}
           </button>

@@ -13,7 +13,7 @@ exports.generateAccessToken = (user) => {
       role: user.Role || 'admin' // tambahkan role
     },
     SECRET_KEY,
-    { expiresIn: "15m" }
+    { expiresIn: "59m" }
   );
 };
 
