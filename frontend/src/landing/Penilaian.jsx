@@ -79,38 +79,126 @@ export default function Penilaian() {
         data-aos="fade-up"
         data-aos-delay="250"
       >
-        {[1, 2, 3, 4].map((i) => (
-          <div
-            key={i}
-            className="p-6 border border-gray-200 rounded-2xl bg-white shadow-md transition"
-            data-aos="zoom-in"
-          >
-            <div className="flex justify-between items-center">
-              <h2 className="font-semibold text-lg">AI Engineer</h2>
-              <p className="text-gray-400 text-sm">26 Oktober 2025</p>
-            </div>
-
-            <div className="flex text-yellow-400 text-lg mt-1">
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar className="text-gray-300" />
-            </div>
-
-            <p className="text-gray-600 text-sm mt-4 leading-relaxed">
-              Kos Putra 3 Saudara benar-benar memberikan kenyamanan dan
-              ketenangan. Fasilitas bersih, lingkungan aman, dan pengelola
-              sangat responsif.
-            </p>
-
-            <img
-              src="https://i.pravatar.cc/40?img=7"
-              className="w-10 h-10 rounded-full mt-4"
-              alt="user"
-            />
+        {/* CARD 1 */}
+        <div
+          className="p-6 border border-gray-200 rounded-2xl bg-white shadow-md transition"
+          data-aos="zoom-in"
+        >
+          <div className="flex justify-between items-center">
+            <h2 className="font-semibold text-lg">Bigmo</h2>
+            <p className="text-gray-400 text-sm">26 Oktober 2025</p>
           </div>
-        ))}
+
+          <div className="flex text-yellow-400 text-lg mt-1">
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar className="text-gray-300" />
+          </div>
+
+          <p className="text-gray-600 text-sm mt-4 leading-relaxed">
+            Kos Putra 3 Saudara benar-benar memberikan kenyamanan dan
+            ketenangan. Fasilitas bersih, lingkungan aman, dan pengelola sangat
+            responsif.
+          </p>
+
+          <img
+            src="https://i.pravatar.cc/40?img=7"
+            className="w-10 h-10 rounded-full mt-4"
+            alt="user"
+          />
+        </div>
+
+        {/* CARD 2 */}
+        <div
+          className="p-6 border border-gray-200 rounded-2xl bg-white shadow-md transition"
+          data-aos="zoom-in"
+        >
+          <div className="flex justify-between items-center">
+            <h2 className="font-semibold text-lg">Mas Rusdi</h2>
+            <p className="text-gray-400 text-sm">28 Oktober 2025</p>
+          </div>
+
+          <div className="flex text-yellow-400 text-lg mt-1">
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+          </div>
+
+          <p className="text-gray-600 text-sm mt-4 leading-relaxed">
+            Lingkungannya nyaman dan dekat dengan fasilitas umum. Rekomendasi
+            banget buat mahasiswa perantau.
+          </p>
+
+          <img
+            src="https://i.pravatar.cc/40?img=7"
+            className="w-10 h-10 rounded-full mt-4"
+            alt="user"
+          />
+        </div>
+
+        {/* CARD 3 */}
+        <div
+          className="p-6 border border-gray-200 rounded-2xl bg-white shadow-md transition"
+          data-aos="zoom-in"
+        >
+          <div className="flex justify-between items-center">
+            <h2 className="font-semibold text-lg">Mas Amba</h2>
+            <p className="text-gray-400 text-sm">30 Oktober 2025</p>
+          </div>
+
+          <div className="flex text-yellow-400 text-lg mt-1">
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+          </div>
+
+          <p className="text-gray-600 text-sm mt-4 leading-relaxed">
+            Pengurus kosnya ramah, air lancar, dan suasana kamar nyaman banget.
+            Cocok untuk yang ingin tempat tenang.
+          </p>
+
+          <img
+            src="https://i.pravatar.cc/40?img=7"
+            className="w-10 h-10 rounded-full mt-4"
+            alt="user"
+          />
+        </div>
+
+        {/* CARD 4 */}
+        <div
+          className="p-6 border border-gray-200 rounded-2xl bg-white shadow-md transition"
+          data-aos="zoom-in"
+        >
+          <div className="flex justify-between items-center">
+            <h2 className="font-semibold text-lg">Halo Mok</h2>
+            <p className="text-gray-400 text-sm">31 Oktober 2025</p>
+          </div>
+
+          <div className="flex text-yellow-400 text-lg mt-1">
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar className="text-gray-300" />
+          </div>
+
+          <p className="text-gray-600 text-sm mt-4 leading-relaxed">
+            Harga terjangkau dengan fasilitas yang memadai. Tempatnya bersih dan
+            nyaman untuk dihuni jangka panjang.
+          </p>
+
+          <img
+            src="https://i.pravatar.cc/40?img=7"
+            className="w-10 h-10 rounded-full mt-4"
+            alt="user"
+          />
+        </div>
       </div>
     </section>
   );

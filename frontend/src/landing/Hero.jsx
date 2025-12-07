@@ -23,12 +23,14 @@ export default function Hero() {
             data-aos-delay="200"
           >
             <a
-              href="#lokasi"
-              className="bg-blue-400 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-200 transition"
+              href="https://www.google.com/maps?q=-6.78068363884325,110.84942761601535"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-400 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-500 transition"
             >
               Lihat Lokasi
             </a>
-
+            
             <a
               href="https://wa.me/6288228675019"
               className="bg-white text-black px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition"

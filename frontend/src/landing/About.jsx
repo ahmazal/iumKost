@@ -45,9 +45,7 @@ export default function About() {
             penghuni dapat tinggal dengan tenang dan fokus pada aktivitas
             sehari-hari.
           </p>
-          <button className="mt-6 bg-black cursor-pointer py-2 px-6 rounded-xs group">
-            <span className="text-sm font-md text-white group-hover:text-gray-300 duration-200">hubungi kami</span>
-          </button>
+          
         </div>
 
         {/* RIGHT IMAGE */}
