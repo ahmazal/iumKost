@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Plus, Edit2, Trash2, Eye, EyeOff, X, DollarSign } from 'lucide-react';
+import ButtonBack from '../components/buttonBack';
 
 const API_URL = 'http://localhost:3000';
 
@@ -399,6 +400,7 @@ export default function AdminDashboard() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+          <ButtonBack />
           <h1 className="text-3xl font-bold text-gray-800 mb-2">
             Manajemen Penghuni
           </h1>
