@@ -90,7 +90,7 @@ function Tagihan({ tagihan = [], riwayat = [], statistics = null, admin = null }
               </div>
 
               <div className="flex">
-                <span className="text-gray-600 w-32">Kelas</span>
+                <span className="text-gray-600 w-32">Kamar</span>
                 <span className="text-gray-600 mx-4">:</span>
                 <span className="text-gray-800">{firstTagihan?.Id_Penghuni || '-'}</span>
               </div>
@@ -119,7 +119,7 @@ function Tagihan({ tagihan = [], riwayat = [], statistics = null, admin = null }
               </div>
 
               <div className="flex">
-                <span className="text-gray-600 w-32">Kelas</span>
+                <span className="text-gray-600 w-32">Kamar</span>
                 <span className="text-gray-600 mx-4">:</span>
                 <span className="text-gray-800">{firstRiwayat?.Id_Penghuni || '-'}</span>
               </div>
